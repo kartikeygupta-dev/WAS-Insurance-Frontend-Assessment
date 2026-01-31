@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mega Menu Replica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MOBILE HEADER -->
+<header>
+  <div class="logo">
+    <img src="img/logo.svg" alt="">
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <div class="nav-item">
+    <div class="nav-head">
+      <span>Travel Insurance</span>
+      <img src="img/nav-arrow.svg">
+    </div>
+    <ul class="submenu">
+      <li>Plans</li>
+      <li>Upgrades</li>
+      <li>Traveller Type</li>
+      <li>Trip Type</li>
+      <li>Benefits</li>
+    </ul>
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-head">
+      <span>Emergency Assistance</span>
+    </div>
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-head">
+      <span>Customer Service</span>
+      <img src="img/nav-arrow.svg">
+    </div>
+    <ul class="submenu">
+      <li>Contact Us</li>
+      <li>FAQ</li>
+      <li>Support</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- DESKTOP NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="logo">
+    <img src="img/logo.svg" class="logo-dark">
+    <img src="img/white-logo.svg" class="logo-white">
+  </div>
+  <div class="menu">
+    <div class="menu-item" id="menuHover">
+      Travel Insurance <img class="arrow" src="img/nav-arrow.svg">
+    </div>
+    <div class="menu-item">Emergency Assistance</div>
+    <div class="menu-item">Customer Service <img class="arrow" src="img/nav-arrow.svg"></div>
+  </div>
+</nav>
+
+<!-- MEGA MENU -->
+<div class="mega-menu" id="megaMenu">
+  <div class="mega-grid">
+    <div class="mega-image">
+      <img src="img/mega-img.png">
+    </div>
+    <div class="mega-content">
+      <h2>Travel Insurance</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida tincidunt mi, in bibendum sapien pellentesque vitae. Vestibulum quis purus neque. Nam condimentum in lorem id facilisis.</p>
+      <button>GET A QUOTE</button>
+    </div>
+    <div class="mega-links">
+      <a href="#">Plans</a>
+      <a href="#">Upgrades</a>
+      <a href="#">Traveller Type</a>
+      <a href="#">Trip Type</a>
+      <a href="#">Benefits</a>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="tagline">Breaking the limits of traditional travel insurance</p>
+    <h1>Find the Right Plan for You</h1>
+
+    <div class="card-wrapper">
+      <div class="card-tabs">
+        <button class="tab-btn single active">Single Trip</button>
+        <button class="tab-btn multi">Multi Trip</button>
+      </div>
+
+      <div class="card">
+        <div class="field">
+          <label>Where are you travelling?</label>
+          <div class="select-box" onclick="toggleDropdown()">
+            <span>Type or choose your destinations</span><span style="transform: translateY(-5px);">⌄</span>
+          </div>
+          <div class="dropdown" id="dropdowns">
+            <div onclick="addChip('Austria')">Austria</div>
+            <div onclick="addChip('Bali (Indonesia)')">Bali (Indonesia)</div>
+            <div onclick="addChip('Canada')">Canada</div>
+          </div>
+          <div class="chips" id="chips"></div>
+        </div>
+
+        <div class="field">
+          <label>When do you leave?</label>
+          <input placeholder="DD/MM/YYYY">
+        </div>
+
+        <div class="field">
+          <label>When do you return?</label>
+          <input placeholder="DD/MM/YYYY">
+        </div>
+
+        <div class="field">
+          <label>Current age of all Travellers?</label>
+          <div class="age-row">
+            <input>
+            <button class="plus-btn">+</button>
+          </div>
+        </div>
+
+        <input placeholder="Promo Code">
+        <button class="quote-btn">GET A QUOTE</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="app.js">
+
+</script>
+
+
+</body>
+</html>
