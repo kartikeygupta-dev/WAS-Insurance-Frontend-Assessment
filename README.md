@@ -59,7 +59,7 @@ Prototype URL:
 ## GitHub Repository
 
 Repository URL:  
-[PASTE YOUR GITHUB REPO LINK HERE]
+https://github.com/kartikeygupta-dev/WAS-Insurance-Frontend-Assessment.git
 
 ---
 
