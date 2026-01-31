@@ -52,7 +52,7 @@ No frontend frameworks such as React, Angular, or Vue were used.
 ## Live Demo
 
 Prototype URL:  
-[PASTE YOUR LIVE URL HERE]
+https://wasinsurace-kartikeygupta.netlify.app/
 
 ---
 
