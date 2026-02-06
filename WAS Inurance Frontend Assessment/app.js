@@ -1,71 +1,48 @@
-const navbar   = document.getElementById("navbar");
-const menu     = document.getElementById("menuHover");
-const megaMenu = document.getElementById("megaMenu");
-const overlay  = document.getElementById("overlay");
-const logo     = document.getElementById("logoImg");
-
-let isHovering = false;
-
-function openMenu(){
-  isHovering = true;
-  navbar.classList.add("active");
-  menu.classList.add("active");
-  megaMenu.style.display = "block";
-  overlay.classList.add("show");
-  logo.src = "logo-white.png";
-}
-
-function closeMenu(){
-  isHovering = false;
-  navbar.classList.remove("active");
-  menu.classList.remove("active");
-  megaMenu.style.display = "none";
-  overlay.classList.remove("show");
-  logo.src = "logo-dark.png";
-}
-
-/* OPEN on hover */
-menu.addEventListener("mouseenter", openMenu);
-megaMenu.addEventListener("mouseenter", openMenu);
-
-/* CLOSE only when leaving BOTH */
-menu.addEventListener("mouseleave", () => {
-  setTimeout(() => {
-    if (!isHovering) closeMenu();
-  }, 80);
-});
-
-megaMenu.addEventListener("mouseleave", () => {
-  setTimeout(() => {
-    if (!isHovering) closeMenu();
-  }, 80);
-});
-
-/* Overlay closes */
-overlay.addEventListener("mouseenter", closeMenu);
-
-/* MOBILE MENU (unchanged) */
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
-const navItems = document.querySelectorAll(".nav-item");
+const mobileNav = document.querySelector(".mobile-nav");
 
-hamburger.onclick = () => {
+hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   mobileMenu.classList.toggle("show");
-
-  megaMenu.style.display="none";
-  overlay.classList.remove("show");
-};
-
-navItems.forEach(item=>{
-  const head = item.querySelector(".nav-head");
-  head.onclick = ()=>{
-    navItems.forEach(i=>i!==item && i.classList.remove("active"));
-    item.classList.toggle("active");
-  };
+  mobileNav.classList.toggle("menu-open");
+  document.body.classList.toggle("menu-open");
 });
 
+document.querySelectorAll(".nav-head").forEach(head => {
+  head.addEventListener("click", () => {
+    const parent = head.parentElement;
+    parent.classList.toggle("active");
+  });
+});
 
+const navbar   = document.getElementById("navbar");
+const menuItem = document.getElementById("menuHover");
+const megaMenu = document.getElementById("megaMenu");
+const overlay  = document.getElementById("overlay");
+
+menuItem.addEventListener("click", () => {
+  const isOpen = menuItem.classList.contains("active");
+
+  if (isOpen) {
+    menuItem.classList.remove("active");
+    navbar.classList.remove("active");
+    megaMenu.style.display = "none";
+    overlay.classList.remove("show");
+  } else {
+    menuItem.classList.add("active");
+    navbar.classList.add("active");
+    megaMenu.style.display = "block";
+    overlay.classList.add("show");
+  }
+});
+
+overlay.addEventListener("click", () => {
+  menuItem.classList.remove("active");
+  navbar.classList.remove("active");
+  megaMenu.style.display = "none";
+  overlay.classList.remove("show");
+});
 
 const dropdown=document.getElementById("dropdowns");
 const chips=document.getElementById("chips");
