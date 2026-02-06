@@ -400,7 +400,9 @@ header{
 }
 
 /* ================= FORM ================= */
-
+.field {
+  margin-bottom: 18px;
+}
 label{
   font-weight:700;
   display:block;
@@ -517,4 +519,5 @@ input{
   }
 
 }
+
 
