@@ -11,7 +11,7 @@ The goal of this task was to translate high-fidelity Figma designs into clean, r
 1. Home Page (Desktop)
 2. Home Page with Desktop Mega Menu
 3. Home Page with Mobile Navigation Menu
-
+4. Hero Section
 All pages are built based on the provided Figma design.
 
 ---
@@ -52,7 +52,7 @@ No frontend frameworks such as React, Angular, or Vue were used.
 ## Live Demo
 
 Prototype URL:  
-https://wasinsurace-kartikeygupta.netlify.app/
+https://was-insurancebykartikeygupta.netlify.app/
 
 ---
 
