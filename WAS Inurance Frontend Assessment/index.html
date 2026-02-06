@@ -122,16 +122,23 @@
       <div class="card">
         <div class="field">
           <label>Where are you travelling?</label>
-          <div class="select-box" onclick="toggleDropdown()">
-            <span style="color: gray;">Type or choose your destinations</span><span><img src="img/nav-arrow.svg" alt="arrow" style="width:10px"></span>
+        
+          <div class="select-wrapper">
+            <div class="select-box" onclick="toggleDropdown()">
+              <span>Type or choose your destinations</span>
+              <span><img src="img/nav-arrow.svg"></span>
+            </div>
+        
+            <div class="dropdown" id="dropdowns">
+              <div onclick="addChip('Austria')">Austria</div>
+              <div onclick="addChip('Bali (Indonesia)')">Bali (Indonesia)</div>
+              <div onclick="addChip('Canada')">Canada</div>
+            </div>
           </div>
-          <div class="dropdown" id="dropdowns">
-            <div onclick="addChip('Austria')">Austria</div>
-            <div onclick="addChip('Bali (Indonesia)')">Bali (Indonesia)</div>
-            <div onclick="addChip('Canada')">Canada</div>
-          </div>
+        
           <div class="chips" id="chips"></div>
         </div>
+
 
         <div class="field">
           <label>When do you leave?</label>
@@ -164,4 +171,5 @@
 
 </body>
 </html>
+
 
