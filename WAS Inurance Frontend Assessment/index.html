@@ -2,98 +2,112 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>WAS Insurance</title>
+<title>WAS INSURANCE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<!------Mobile-navbar------->
+<div class="mobile-nav">
 
-<!-- MOBILE HEADER -->
-<header>
-  <div class="logo">
-    <img src="img/logo.svg" alt="">
-  </div>
-  <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>
-</header>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-
-  <div class="nav-item">
-    <div class="nav-head">
-      <span>Travel Insurance</span>
-      <img src="img/nav-arrow.svg">
+  <header>
+    <div class="logo">
+      <img src="img/logo.svg" alt="Logo">
     </div>
-    <ul class="submenu">
-      <li>Plans</li>
-      <li>Upgrades</li>
-      <li>Traveller Type</li>
-      <li>Trip Type</li>
-      <li>Benefits</li>
-    </ul>
-  </div>
 
-  <div class="nav-item">
-    <div class="nav-head">
-      <span>Emergency Assistance</span>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </div>
+  </header>
 
-  <div class="nav-item">
-    <div class="nav-head">
-      <span>Customer Service</span>
-      <img src="img/nav-arrow.svg">
+  <div class="mobile-menu" id="mobileMenu">
+
+    <div class="nav-item">
+      <div class="nav-head">
+        <span>Travel Insurance</span>
+        <img src="img/nav-arrow.svg" alt="">
+      </div>
+      <ul class="submenu">
+        <li>Plans</li>
+        <li>Upgrades</li>
+        <li>Traveller Type</li>
+        <li>Trip Type</li>
+        <li>Benefits</li>
+      </ul>
     </div>
-    <ul class="submenu">
-      <li>Contact Us</li>
-      <li>FAQ</li>
-      <li>Support</li>
-    </ul>
+
+    <div class="nav-item">
+      <div class="nav-head">
+        <span>Emergency Assistance</span>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <div class="nav-head">
+        <span>Customer Service</span>
+        <img src="img/nav-arrow.svg" alt="">
+      </div>
+      <ul class="submenu">
+        <li>Contact Us</li>
+        <li>FAQ</li>
+        <li>Support</li>
+      </ul>
+    </div>
+
   </div>
 
 </div>
 
-<!-- DESKTOP NAVBAR -->
-<nav class="navbar" id="navbar">
-  <div class="logo">
-    <img src="img/logo.svg" class="logo-dark">
-    <img src="img/white-logo.svg" class="logo-white">
-  </div>
-  <div class="menu">
-    <div class="menu-item" id="menuHover">
-      Travel Insurance <img class="arrow" src="img/nav-arrow.svg">
-    </div>
-    <div class="menu-item">Emergency Assistance</div>
-    <div class="menu-item">Customer Service <img class="arrow" src="img/nav-arrow.svg"></div>
-  </div>
-</nav>
+<div class="desktop-nav">
 
-<!-- MEGA MENU -->
-<div class="mega-menu" id="megaMenu">
-  <div class="mega-grid">
-    <div class="mega-image">
-      <img src="img/mega-img.png">
+  <!-- DESKTOP NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">
+      <img src="img/logo.svg" class="logo-dark">
+      <img src="img/white-logo.svg" class="logo-white">
     </div>
-    <div class="mega-content">
-      <h2>Travel Insurance</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida tincidunt mi, in bibendum sapien pellentesque vitae. Vestibulum quis purus neque. Nam condimentum in lorem id facilisis.</p>
-      <button>GET A QUOTE</button>
+
+    <div class="menu">
+      <div class="menu-item" id="menuHover">
+        Travel Insurance <img class="arrow" src="img/nav-arrow.svg">
+      </div>
+      <div class="menu-item">Emergency Assistance</div>
+      <div class="menu-item">
+        Customer Service <img class="arrow" src="img/nav-arrow.svg">
+      </div>
     </div>
-    <div class="mega-links">
-      <a href="#">Plans</a>
-      <a href="#">Upgrades</a>
-      <a href="#">Traveller Type</a>
-      <a href="#">Trip Type</a>
-      <a href="#">Benefits</a>
+  </nav>
+
+  <!-- MEGA MENU -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-grid">
+      <div class="mega-image">
+        <img src="img/mega-img.png">
+      </div>
+      <div class="mega-content">
+        <h2>Travel Insurance</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nam gravida tincidunt mi, in bibendum sapien pellentesque vitae.
+        </p>
+        <button>GET A QUOTE</button>
+      </div>
+      <div class="mega-links">
+        <a href="#">Plans</a>
+        <a href="#">Upgrades</a>
+        <a href="#">Traveller Type</a>
+        <a href="#">Trip Type</a>
+        <a href="#">Benefits</a>
+      </div>
     </div>
   </div>
+
+  <div class="overlay" id="overlay"></div>
 </div>
-
-<div class="overlay" id="overlay"></div>
-
+<!------Hero Section------->
 <section class="hero">
   <div class="hero-inner">
     <p class="tagline">Breaking the limits of traditional travel insurance</p>
@@ -109,7 +123,7 @@
         <div class="field">
           <label>Where are you travelling?</label>
           <div class="select-box" onclick="toggleDropdown()">
-            <span>Type or choose your destinations</span><span style="transform: translateY(-5px);">⌄</span>
+            <span style="color: gray;">Type or choose your destinations</span><span><img src="img/nav-arrow.svg" alt="arrow" style="width:10px"></span>
           </div>
           <div class="dropdown" id="dropdowns">
             <div onclick="addChip('Austria')">Austria</div>
@@ -148,8 +162,5 @@
 
 </script>
 
-
 </body>
 </html>
-
-
